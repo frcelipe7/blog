@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; font-weight: 500;
+}
+
+header {
+    width: 100%; height: 400px;
+    background-color: yellow;
+}
+
+section#recentes {
+    padding: 50px 0;
+    width: 80%; height: auto;
+    margin: auto;
+    border-bottom: 1px black solid;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 5px;
+    position: relative;
+    margin-top: 50px;
+    border-top: 1px black solid;
+    padding-top: 70px;
+    margin-bottom: 30px;
+}
+
+section#recentes .line_top {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    top: 20px;
+}
+
+section#recentes a {
+    text-decoration: none;
+}
+
+section#recentes .post_content {
+    width: 100%; height: 300px;
+    border-radius: 10px;
+    border: 1px solid yellow;
+    overflow: hidden;
+    position: relative;
+}
+
+section#recentes .post_content img {
+    transition: .3s;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+section#recentes .post_content:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+section#recentes .post_content h2 {
+    font-size: 17pt;
+    color: #fff;
+
+    background-image: linear-gradient(180deg, black, transparent);
+    padding: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    transition: .3s;
+}
+
