@@ -3,7 +3,7 @@ MUNDO = 'MUND'
 ESPORTES = 'SPRT'
 ECONOMIA = 'ECON'
 POLITICA = 'PLTC'
-AUTOMOVEIS = 'AUTM'
+ENTRETENIMENTO = 'ETTN'
 SAUDE = 'SAUD'
 EDUCACAO = 'EDUC'
 
@@ -14,7 +14,7 @@ CATEGORY_CHOICES = [
     (ESPORTES, "Esportes"),
     (ECONOMIA, "Economia"),
     (POLITICA, "Política"),
-    (AUTOMOVEIS, "Automóveis"),
+    (ENTRETENIMENTO, "Entretenimento"),
     (SAUDE, "Saúde"),
     (EDUCACAO, "Educação"),
 ]

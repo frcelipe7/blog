@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <header>
@@ -14,9 +15,11 @@
     <section id="recentes">
         <div class="line_top">
             <h2>Mais recentes</h2>
-            <div class="ver_mais">
-                Ver mais >
-            </div>
+            <a href="#mais_recentes">
+                <div class="ver_mais">
+                    Ver mais >
+                </div>
+            </a>
         </div>
         <a href="/">
             <div class="post_content">
@@ -47,7 +50,105 @@
         </a>
     </section>
     <section id="categorias">
+        <div class="line_top">
+            <h2>Categorias</h2>
+        </div>
+        <a href="?categoria=tecnologia">
+            <div class="category_icon tech">
+                <span class="material-symbols-outlined">memory</span>
+                Tecnologia
+            </div>
+        </a>
+        <a href="?categoria=mundo">
+            <div class="category_icon mundo">
+                <span class="material-symbols-outlined">public</span>
+                Mundo
+            </div>
+        </a>
+        <a href="?categoria=esportes">
+            <div class="category_icon esporte">
+                <span class="material-symbols-outlined">sports_soccer</span>
+                Esportes
+            </div>
+        </a>
+        <a href="?categoria=economia">
+            <div class="category_icon economia">
+                <span class="material-symbols-outlined">attach_money</span>
+                Economia
+            </div>
+        </a>
+        <a href="?categoria=politica">
+            <div class="category_icon politica">
+                <span class="material-symbols-outlined">groups</span>
+                Política
+            </div>
+        </a>
+        <a href="?categoria=entretenimento">
+            <div class="category_icon entretenimento">
+                <span class="material-symbols-outlined">stadia_controller</span>
+                Entretenimento
+            </div>
+        </a>
+        <a href="?categoria=saude">
+            <div class="category_icon saude">
+                <span class="material-symbols-outlined">emergency</span>
+                Saúde
+            </div>
+        </a>
+        <a href="?categoria=educacao">
+            <div class="category_icon educacao">
+                <span class="material-symbols-outlined">school</span>
+                Educação
+            </div>
+        </a>
+    </section>
+    <section id="destaques">
+        <div class="line_top">
+            <h2>Populares</h2>
+        </div>
+        <a href="/popular">
+            <div class="post_principal">
+                <img src="politic.jpg" alt="img_post_destaque_principal">
+                <div class="text">
+                    <h2>Título do post</h2>
+                    <p class="demo">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s... Leia mais.
+                    </p>
+                </div>
+            </div>
+        </a>
+        <div class="outros">
+            <a href="/" class="first">
+                <div class="content">
+                    <img src="business.jpg" alt="post_image">
+                    <h3>Título do post</h3>
+                </div>
+            </a>
 
+            <a href="/">
+                <div class="content">
+                    <img src="plane.jpg" alt="post_image">
+                    <h3>Título do post</h3>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="content">
+                    <img src="football.jpg" alt="post_image">
+                    <h3>Título do post</h3>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="content">
+                    <img src="tech.jpg" alt="post_image">
+                    <h3>Título do post</h3>
+                </div>
+            </a>
+        </div>
     </section>
 </body>
 </html>
