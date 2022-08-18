@@ -8,7 +8,27 @@
 header {
     width: 100%; height: 400px;
     background-color: yellow;
+    overflow: hidden;
+    object-fit: cover;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 section#recentes,
 section#destaques,
@@ -91,6 +111,26 @@ section#recentes .post_content h2 {
 }
 
 
+@media (max-width: 620px) {
+    section#recentes {
+        grid-template-columns: 1fr;
+    }
+    section#recentes .post_content {
+        height: 200px;
+    }
+    section#recentes .post_content img {
+        height: 120%;
+    }
+    section#recentes .post_content h2 {
+        font-size: 15pt;
+    }
+    section#recentes .post_content:hover img {
+        transform: scale(1.03);
+        opacity: 0.95;
+    }
+    
+}
+
 
 
 
@@ -152,7 +192,7 @@ section#categorias .economia:hover {color: #f2f2f2;}
 section#categorias .economia:hover span {color: #f2f2f2;}
 section#categorias .esporte {background-color: gold; color: blue;}
 section#categorias .esporte:hover {color: blue;}
-section#categorias .esporte:hover span {color: blue;}
+section#categorias .esporte:hover span {color: goldenrod;}
 section#categorias .politica {background-color: yellow;}
 section#categorias .entretenimento {background-color: blueviolet; color: #f2f2f2;}
 section#categorias .entretenimento:hover {color: #f2f2f2;}
@@ -163,6 +203,13 @@ section#categorias .saude:hover span {color: red;}
 section#categorias .educacao {background-color: blue; color: #f2f2f2;}
 section#categorias .educacao:hover {color: #fff;}
 section#categorias .educacao:hover span {color: #fff;}
+
+@media (max-width: 620px) {
+    section#categorias {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 
 
 
@@ -193,7 +240,6 @@ section#destaques .post_principal {
 section#destaques .post_principal .text {
     color: #fff;
     width: 100%;
-    /* background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), transparent); */
     padding: 40px;
     padding-bottom: 30px;
     text-align: center;
@@ -254,4 +300,46 @@ section#destaques .outros .first .content{
 
 section#destaques .outros .content img {
     width: 140px; position: inherit;
+}
+
+@media (max-width: 620px) {
+    section#destaques {
+        grid-template-columns: 1fr;
+    }
+    section#destaques .post_principal {
+        position: static;
+        object-fit: contain;
+        flex-direction: column;
+        height: auto;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        margin-bottom: 30px;
+        transition: .3s;
+    }
+    section#destaques .post_principal:hover {
+        opacity: .95;
+    }
+    section#destaques .post_principal img {
+        position: inherit;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 10px;
+    }
+    section#destaques .post_principal:hover img {
+        border-radius: 14px;
+        transform: none;
+    }
+    section#destaques .post_principal .text {
+        padding: 15px 0;
+        font-size: 11pt;
+        background-color: transparent;
+        color: black;
+    }
+
+    section#destaques .post_principal .text h2 {
+        font-size: 15pt;
+    }
+    section#destaques .post_principal .text p {
+        margin-top: 15px;
+    }
 }
