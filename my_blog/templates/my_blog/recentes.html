@@ -1,0 +1,43 @@
+{% extends 'my_blog/layout.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Recentes</title>
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/recentes.css' %}">
+{% endblock %}
+
+{% block body %}
+    <section id="recentes">
+        <a href="/">
+            <div class="post_content">
+                <img src="{% static 'img/doctor.jpg' %}" alt="post_image">
+                <h2>Título do post</h2>
+            </div>
+        </a>
+        
+        <a href="/">
+            <div class="post_content">
+                <img src="{% static 'img/map.jpg' %} " alt="post_image">
+                <h2>Título do post</h2>
+            </div>
+        </a>
+
+        <a href="/">
+            <div class="post_content">
+                <img src="{% static 'img/politic.jpg' %}  " alt="post_image">
+                <h2>Título do post</h2>
+            </div>
+        </a>
+
+        <a href="/">
+            <div class="post_content">
+                <img src="{% static 'img/doctor.jpg' %} " alt="post_image">
+                <h2>Título do post</h2>
+            </div>
+        </a>
+    </section>
+{% endblock %}
