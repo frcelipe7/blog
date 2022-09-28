@@ -7,6 +7,7 @@
 
 {% block head %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu_home.css' %}">
 
     <script src="{% static 'js/home.js' %}"></script>
 {% endblock %}
@@ -24,24 +25,21 @@
                 </div>
             </a>
         </div>
-        <a href="/">
+        <a href="/posts/post_id=1">
             <div class="post_content">
                 <img src="{% static 'img/doctor.jpg' %}" alt="post_image">
                 <h2>Título do post</h2>
-                <!-- <p class="demo">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                </p> -->
             </div>
         </a>
         
-        <a href="/">
+        <a href="/posts/post_id=2">
             <div class="post_content">
                 <img src="{% static 'img/map.jpg' %} " alt="post_image">
                 <h2>Título do post</h2>
             </div>
         </a>
 
-        <a href="/">
+        <a href="/posts/post_id=3">
             <div class="post_content">
                 <img src="{% static 'img/politic.jpg' %}  " alt="post_image">
                 <h2>Título do post</h2>

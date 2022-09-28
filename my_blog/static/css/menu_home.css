@@ -1,0 +1,7 @@
+.top {
+    height: 45px;
+}
+.top .menu a .menu_button {
+    margin-top: -20px;
+    opacity: 0;
+}

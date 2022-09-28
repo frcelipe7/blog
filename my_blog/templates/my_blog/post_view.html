@@ -1,0 +1,26 @@
+{% extends 'my_blog/layout.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Recentes</title>
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/post_view.css' %}">
+
+{% endblock %}
+
+{% block body %}
+    <section id="post_view">
+        <div class="post_content">
+            <img src="/static/img/{{post.image}}" alt="Post image \{{post.title}}\">
+
+            <h1 class="post_title">{{post.title}}</h1>
+
+            <p class="post_text">
+                {{post.text}}
+            </p>
+
+        </div>
+    </section>
+{% endblock %}
