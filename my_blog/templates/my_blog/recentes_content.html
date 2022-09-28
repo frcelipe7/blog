@@ -1,0 +1,8 @@
+{% for post in posts_recentes %}
+    <a href="/posts/post_id={{post.id}}">
+        <div class="post_content">
+            <img src="/static/img/{{post.image}}" alt="post_image">
+            <h2>{{post.title}}</h2>
+        </div>
+    </a>
+{% endfor %}

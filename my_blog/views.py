@@ -2,14 +2,19 @@ from django.shortcuts import render
 from django.http import request, HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import *
+from .choices import CATEGORY_CHOICES
 
 
 def index(request):
-    return render(request, 'my_blog/index.html')
+    return render(request, 'my_blog/index.html', {
+        'posts_recentes': Post.objects.order_by('-id')
+    })
 
 
-def recentes(request):
-    return render(request, 'my_blog/recentes.html')
+def posts(request):
+    return render(request, 'my_blog/recentes.html', {
+        'posts_recentes': Post.objects.order_by('-id')
+    })
 
 
 def post_view(request, post_id):
@@ -21,3 +26,15 @@ def post_view(request, post_id):
     return render(request, 'my_blog/post_view.html', {
         'post': post,
     })
+
+
+def categorias(request):
+    all_posts = Post.objects.order_by('-id')
+    return render(request, 'my_blog/categoria.html', {
+        'all_categories': CATEGORY_CHOICES,
+        'all_posts': all_posts
+    })
+
+
+def categoria(request):
+    pass

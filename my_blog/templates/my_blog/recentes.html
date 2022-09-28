@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    <title>Recentes</title>
+    <title>Posts</title>
 {% endblock %}
 
 {% block head %}
@@ -12,32 +12,6 @@
 
 {% block body %}
     <section id="recentes">
-        <a href="/">
-            <div class="post_content">
-                <img src="{% static 'img/doctor.jpg' %}" alt="post_image">
-                <h2>Título do post</h2>
-            </div>
-        </a>
-        
-        <a href="/">
-            <div class="post_content">
-                <img src="{% static 'img/map.jpg' %} " alt="post_image">
-                <h2>Título do post</h2>
-            </div>
-        </a>
-
-        <a href="/">
-            <div class="post_content">
-                <img src="{% static 'img/politic.jpg' %}  " alt="post_image">
-                <h2>Título do post</h2>
-            </div>
-        </a>
-
-        <a href="/">
-            <div class="post_content">
-                <img src="{% static 'img/doctor.jpg' %} " alt="post_image">
-                <h2>Título do post</h2>
-            </div>
-        </a>
+        {% include 'my_blog/recentes_content.html' %}
     </section>
 {% endblock %}

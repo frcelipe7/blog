@@ -19,39 +19,13 @@
     <section id="recentes">
         <div class="line_top">
             <h2>Mais recentes</h2>
-            <a href="/recentes">
+            <a href="/posts">
                 <div class="ver_mais">
                     Ver mais >
                 </div>
             </a>
         </div>
-        <a href="/posts/post_id=1">
-            <div class="post_content">
-                <img src="{% static 'img/doctor.jpg' %}" alt="post_image">
-                <h2>Título do post</h2>
-            </div>
-        </a>
-        
-        <a href="/posts/post_id=2">
-            <div class="post_content">
-                <img src="{% static 'img/map.jpg' %} " alt="post_image">
-                <h2>Título do post</h2>
-            </div>
-        </a>
-
-        <a href="/posts/post_id=3">
-            <div class="post_content">
-                <img src="{% static 'img/politic.jpg' %}  " alt="post_image">
-                <h2>Título do post</h2>
-            </div>
-        </a>
-
-        <a href="/">
-            <div class="post_content">
-                <img src="{% static 'img/doctor.jpg' %} " alt="post_image">
-                <h2>Título do post</h2>
-            </div>
-        </a>
+        {% include 'my_blog/recentes_content.html' %}
     </section>
     <section id="categorias">
         <div class="line_top">
