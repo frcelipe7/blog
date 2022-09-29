@@ -1,0 +1,30 @@
+{% extends 'my_blog/layout.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Categorias</title>
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/post_content.css' %}">
+<link rel="stylesheet" href="{% static 'css/categorias.css' %}">
+{% endblock %}
+
+{% block body %}
+    <h2>Selecione uma categoria</h2>
+
+    {% for category in all_categories %}
+    <div class="content_category">
+        <div class="line_top">
+            <h2>{{category.1}}</h2>
+            <a href="/categoria/{{category.1.lower}}" class="select">Selecionar</a>
+        </div>
+
+        {% for post in all_posts %}
+            {% if post.category == category.0 %}
+                {% include 'my_blog/recentes_content.html' %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+{% endblock %}

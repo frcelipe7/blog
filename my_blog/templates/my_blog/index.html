@@ -7,6 +7,7 @@
 
 {% block head %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/post_content.css' %}">
     <link rel="stylesheet" href="{% static 'css/menu_home.css' %}">
 
     <script src="{% static 'js/home.js' %}"></script>
@@ -25,55 +26,57 @@
                 </div>
             </a>
         </div>
-        {% include 'my_blog/recentes_content.html' %}
+        {% for post in posts_recentes %}
+            {% include 'my_blog/recentes_content.html' %}
+        {% endfor %}
     </section>
     <section id="categorias">
         <div class="line_top">
             <h2>Categorias</h2>
         </div>
-        <a href="?categoria=tecnologia">
+        <a href="/categoria/tecnologia">
             <div class="category_icon tech">
                 <span class="material-symbols-outlined">memory</span>
                 Tecnologia
             </div>
         </a>
-        <a href="?categoria=mundo">
+        <a href="/categoria/mundo">
             <div class="category_icon mundo">
                 <span class="material-symbols-outlined">public</span>
                 Mundo
             </div>
         </a>
-        <a href="?categoria=esportes">
+        <a href="/categoria/esportes">
             <div class="category_icon esporte">
                 <span class="material-symbols-outlined">sports_soccer</span>
                 Esportes
             </div>
         </a>
-        <a href="?categoria=economia">
+        <a href="/categoria/economia">
             <div class="category_icon economia">
                 <span class="material-symbols-outlined">attach_money</span>
                 Economia
             </div>
         </a>
-        <a href="?categoria=politica">
+        <a href="/categoria/politica">
             <div class="category_icon politica">
                 <span class="material-symbols-outlined">groups</span>
                 Política
             </div>
         </a>
-        <a href="?categoria=entretenimento">
+        <a href="/categoria/entretenimento">
             <div class="category_icon entretenimento">
                 <span class="material-symbols-outlined">stadia_controller</span>
                 Entretenimento
             </div>
         </a>
-        <a href="?categoria=saude">
+        <a href="/categoria/saude">
             <div class="category_icon saude">
                 <span class="material-symbols-outlined">emergency</span>
                 Saúde
             </div>
         </a>
-        <a href="?categoria=educacao">
+        <a href="/categoria/educacao">
             <div class="category_icon educacao">
                 <span class="material-symbols-outlined">school</span>
                 Educação

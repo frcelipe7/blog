@@ -30,11 +30,16 @@ def post_view(request, post_id):
 
 def categorias(request):
     all_posts = Post.objects.order_by('-id')
-    return render(request, 'my_blog/categoria.html', {
+    return render(request, 'my_blog/categorias.html', {
         'all_categories': CATEGORY_CHOICES,
         'all_posts': all_posts
     })
 
 
-def categoria(request):
-    pass
+def categoria(request, categoria):
+    for cate in CATEGORY_CHOICES:
+        if cate[1].lower() == categoria.lower():
+            posts_categoria = Post.objects.filter(category=cate[0])
+    return render(request, "my_blog/categoria.html", {
+        'posts': posts_categoria
+    })

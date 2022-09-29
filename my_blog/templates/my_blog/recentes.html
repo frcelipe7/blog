@@ -12,6 +12,8 @@
 
 {% block body %}
     <section id="recentes">
-        {% include 'my_blog/recentes_content.html' %}
+        {% for post in posts_recentes %}
+            {% include 'my_blog/recentes_content.html' %}
+        {% endfor %}
     </section>
 {% endblock %}
