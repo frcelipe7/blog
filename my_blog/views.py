@@ -4,6 +4,8 @@ from django.urls import reverse
 from .models import *
 from .choices import CATEGORY_CHOICES
 
+from markdown2 import Markdown
+
 
 def index(request):
     return render(request, 'my_blog/index.html', {
@@ -20,11 +22,14 @@ def posts(request):
 def post_view(request, post_id):
     try:
         post = Post.objects.get(id=post_id)
+        mkdw = Markdown()
+        text = mkdw.convert(post.text)
     except:
         return HttpResponseRedirect(reverse(index))
 
     return render(request, 'my_blog/post_view.html', {
         'post': post,
+        'text': text,
     })
 
 
@@ -43,3 +48,25 @@ def categoria(request, categoria):
     return render(request, "my_blog/categoria.html", {
         'posts': posts_categoria
     })
+
+
+def add(request):
+    if request.method == 'POST':
+        title = request.POST['title']
+        image = request.FILES['image']
+        text = request.POST['text']
+        category = request.POST['category']
+
+        post = Post(title=title, image=image, text=text, category=category)
+
+        try:
+            post.save()
+            return render(request, "my_blog/add.html", {
+                'ok_message': "Post enviado com sucesso!"
+            })
+        except:
+            return render(request, "my_blog/add.html", {
+                'error_message': "Ocorreu um erro!"
+            })
+        
+    return render(request, 'my_blog/add.html')

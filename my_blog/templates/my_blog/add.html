@@ -1,0 +1,54 @@
+{% extends 'my_blog/layout.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Posts</title>
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/add.css' %}">
+{% endblock %}
+
+{% block body %}
+
+{% if ok_message %}
+    {{ok_message}}
+{% endif %}
+
+{% if error_message %}
+    {{error_message}}
+{% endif %}
+    <section id="add">
+        <form action="add" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="line title">
+                <input type="text" name="title" id="title" placeholder=" ">
+                <label for="title">Título</label>
+            </div>
+
+            <div class="line image">
+                <input type="file" name="image" id="image" accept="image/png, image/jpeg" required>
+            </div>
+
+            <div class="textarea">
+                <textarea name="text" id="text" placeholder=" "></textarea>
+                <label for="text">Texto</label>
+            </div>
+
+            <div class="line category">
+                
+                <select name="category" id="category">
+                    <option value="TECH">TECNOLOGIA</option>
+                    <option value="MUND">MUNDO</option>
+                    <option value="SPRT">ESPORTES</option>
+                    <option value="ECON">ECONOMIA</option>
+                    <option value="PLTC">POLÍTICA</option>
+                    <option value="ETTN">ENTRETENIMENTO</option>
+                    <option value="SAUD">SAÚDE</option>
+                    <option value="EDUC">EDUCAÇÃO</option>
+                </select>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+{% endblock %}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
+
 #post_view .post_content {
     width: 80%;
     margin: 50px auto;
@@ -9,11 +11,29 @@
     border-radius: 20px 20px 0 0;
 }
 
-#post_view .post_content h1 {
+#post_view .post_content .post_title {
     font-weight: 600;
     font-size: 21pt;
     text-align: center;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+#post_view .post_content .post_text p,
+#post_view .post_content .post_text h2,
+#post_view .post_content .post_text em,
+#post_view .post_content .post_text strong {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+#post_view .post_content .post_text h2 {
+    font-weight: 500;
+}
+
+#post_view .post_content .post_text strong {
+    font-weight: bold;
 }
