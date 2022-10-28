@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
 
-#post_view .post_content {
-    width: 80%;
+#post_view {
+    width: 90%; height: 100%;
     margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\ */
+#post_view .post_content {
+    width: 65%;
+    margin: 0px;
 }
 
 #post_view .post_content img {
@@ -36,4 +45,106 @@
 
 #post_view .post_content .post_text strong {
     font-weight: bold;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\ */
+#post_view .float_content {
+    background-color: #d6d6d6;
+    width: 25%; height: 450px;
+    position: sticky;
+    top: 100px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#post_view .float_content h2 {
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    margin: 15px 0;
+    margin-top: 5px;
+}
+
+.outros {width: 100%;}
+
+.outros a {text-decoration: none;}
+
+.outros .content {
+    height: 70px; overflow: hidden;
+    object-fit: cover;
+    margin-top: 5px;
+    display: flex;
+    color: rgb(45, 84, 147);
+    transition: .3s;
+    padding-bottom: 3px;
+    border-bottom: 1px solid gray;
+}
+
+.outros .content:hover {
+    opacity: .7;
+    transform: scale(0.99);
+}
+
+.outros .content h4 {
+    margin: 0 7px;
+    font-weight: 500;
+}
+
+.outros .content:hover h4 {
+    color: black;
+    transition: .3s;
+}
+
+.outros .content img {
+    width: 110px; object-fit: cover;
+}
+
+.float_content .redes_sociais {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.float_content .redes_sociais .rede {
+    border-radius: 50px;
+    width: 40px; height: 40px;
+    background-color: rgb(45, 84, 147);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .1s;
+}
+
+.float_content .redes_sociais .rede:hover {
+    transform: scale(0.97);
+    opacity: .9;
+}
+
+.float_content .redes_sociais .rede svg {
+    width: 20px; height: 20px;
+    fill: #f2f2f2;
+}
+
+.rede.insta {
+    background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: -ms-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: -o-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -o-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+}
+
+/* .float_content .redes_sociais .rede.insta svg {
+    margin-left: 1px;
+} */
+
+.float_content .redes_sociais .rede.face {
+    background-color: #3b5998;
+}
+
+.float_content .redes_sociais .rede.twitter {
+    background-color: #1DA1F2;
+}
+
+.float_content .redes_sociais .rede.youtube {
+    background-color: #C4302b;
 }
