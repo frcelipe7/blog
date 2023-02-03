@@ -20,6 +20,7 @@ def posts(request):
 
 
 def post_view(request, post_id):
+    last_three = Post.objects.order_by('-id')[:3]
     try:
         post = Post.objects.get(id=post_id)
         mkdw = Markdown()
@@ -30,11 +31,25 @@ def post_view(request, post_id):
     return render(request, 'my_blog/post_view.html', {
         'post': post,
         'text': text,
+        'last_three': last_three
     })
 
 
 def categorias(request):
     all_posts = Post.objects.order_by('-id')
+
+    count = 0
+    posts_list = []
+
+    for category in CATEGORY_CHOICES:
+        count = 0
+        for post in all_posts:
+            if post.category == category[0]:
+                if count < 5:
+                    posts_list.append(post)
+                    count += 1
+    print(posts_list)
+
     return render(request, 'my_blog/categorias.html', {
         'all_categories': CATEGORY_CHOICES,
         'all_posts': all_posts
@@ -43,8 +58,9 @@ def categorias(request):
 
 def categoria(request, categoria):
     for cate in CATEGORY_CHOICES:
-        if cate[1].lower() == categoria.lower():
+        if cate[0].lower() == categoria.lower():
             posts_categoria = Post.objects.filter(category=cate[0])
+            break
     return render(request, "my_blog/categoria.html", {
         'posts': posts_categoria
     })

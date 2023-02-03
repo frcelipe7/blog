@@ -26,9 +26,11 @@
                 </div>
             </a>
         </div>
-        {% for post in posts_recentes %}
-            {% include 'my_blog/recentes_content.html' %}
-        {% endfor %}
+        <div class="display_posts_section">
+            {% for post in posts_recentes %}
+                {% include 'my_blog/recentes_content.html' %}
+            {% endfor %}
+        </div>
     </section>
     <section id="categorias">
         <div class="line_top">

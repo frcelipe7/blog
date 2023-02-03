@@ -69,34 +69,46 @@
 
 .outros a {text-decoration: none;}
 
-.outros .content {
-    height: 70px; overflow: hidden;
-    object-fit: cover;
+.outros a .outros_post_content {
+    height: 70px; width: 100%;
+    overflow: hidden;
     margin-top: 5px;
+    object-fit: cover;
     display: flex;
+    flex-direction: row;
     color: rgb(45, 84, 147);
     transition: .3s;
-    padding-bottom: 3px;
     border-bottom: 1px solid gray;
 }
 
-.outros .content:hover {
+.outros a .outros_post_content:hover {
     opacity: .7;
     transform: scale(0.99);
 }
 
-.outros .content h4 {
-    margin: 0 7px;
+.outros .outros_post_content p {
+    width: 100%;
     font-weight: 500;
+    color: rgb(59, 59, 59);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
 }
 
-.outros .content:hover h4 {
+.outros .outros_post_content:hover p {
     color: black;
     transition: .3s;
 }
 
-.outros .content img {
-    width: 110px; object-fit: cover;
+.float_content .outros a .outros_post_content img {
+    height: 100%; 
+    min-width: 90px;
+    max-width: 90px;
+    border-radius: 0 5px 5px 0;
+    position: relative;
+    object-fit: cover;
+    margin-right: 5px;
 }
 
 .float_content .redes_sociais {

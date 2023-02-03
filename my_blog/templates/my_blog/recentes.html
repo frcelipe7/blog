@@ -7,13 +7,16 @@
 
 {% block head %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/post_content.css' %}">
     <link rel="stylesheet" href="{% static 'css/recentes.css' %}">
 {% endblock %}
 
 {% block body %}
     <section id="recentes">
-        {% for post in posts_recentes %}
-            {% include 'my_blog/recentes_content.html' %}
-        {% endfor %}
+        <div class="display_posts_section">
+            {% for post in posts_recentes %}
+                {% include 'my_blog/recentes_content.html' %}
+            {% endfor %}
+        </div>
     </section>
 {% endblock %}
