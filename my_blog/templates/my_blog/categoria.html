@@ -1,0 +1,23 @@
+{% extends 'my_blog/layout.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Categorias</title>
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/categoria.css' %}">
+<link rel="stylesheet" href="{% static 'css/post_content.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="content_category">
+        <h2 class="title">{{categoria}}</h2>
+        
+        <div class="display_posts">
+            {% for post in posts %}
+                {% include 'my_blog/recentes_content.html' %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -9,7 +9,7 @@ from markdown2 import Markdown
 
 def index(request):
     return render(request, 'my_blog/index.html', {
-        'posts_recentes': Post.objects.order_by('-id')
+        'posts_recentes': Post.objects.order_by('-id')[:4]
     })
 
 
@@ -45,23 +45,27 @@ def categorias(request):
         count = 0
         for post in all_posts:
             if post.category == category[0]:
-                if count < 5:
+                if count < 4:
                     posts_list.append(post)
                     count += 1
     print(posts_list)
 
     return render(request, 'my_blog/categorias.html', {
         'all_categories': CATEGORY_CHOICES,
-        'all_posts': all_posts
+        'all_posts': posts_list
     })
 
 
 def categoria(request, categoria):
+    posts_categoria = []
+    selected_category = "None"
     for cate in CATEGORY_CHOICES:
-        if cate[0].lower() == categoria.lower():
-            posts_categoria = Post.objects.filter(category=cate[0])
+        if cate[1].lower() == categoria.lower():
+            posts_categoria = Post.objects.filter(category=f"{cate[0]}")
+            selected_category = cate[1].title()
             break
     return render(request, "my_blog/categoria.html", {
+        'categoria': selected_category,
         'posts': posts_categoria
     })
 

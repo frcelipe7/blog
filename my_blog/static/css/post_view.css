@@ -12,6 +12,9 @@
 #post_view .post_content {
     width: 65%;
     margin: 0px;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 #post_view .post_content img {
