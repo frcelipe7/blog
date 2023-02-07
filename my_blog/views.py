@@ -48,7 +48,6 @@ def categorias(request):
                 if count < 4:
                     posts_list.append(post)
                     count += 1
-    print(posts_list)
 
     return render(request, 'my_blog/categorias.html', {
         'all_categories': CATEGORY_CHOICES,

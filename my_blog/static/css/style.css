@@ -33,14 +33,18 @@ section#destaques,
 section#categorias {
     width: 80%; height: auto;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 5px;
     position: relative;
     margin-top: 50px;
     border-top: 1px black solid;
     padding: 0%;
     padding-top: 70px;
+}
+
+section#destaques,
+section#categorias {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 5px;
 }
 
 section#recentes .line_top,
@@ -93,7 +97,7 @@ section#categorias .category_icon span {
     position: absolute;
     /* left: -10px;
     top: 15px; */
-    transition: .8s;
+    transition: .3s;
     font-size: 25pt;
     opacity: 0;
     z-index: 0;
