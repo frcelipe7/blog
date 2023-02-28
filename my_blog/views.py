@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import request, HttpResponse, HttpResponseRedirect
+from django.http import request, HttpResponseRedirect
 from django.urls import reverse
 from .models import *
 from .choices import CATEGORY_CHOICES
@@ -59,8 +59,8 @@ def categoria(request, categoria):
     posts_categoria = []
     selected_category = "None"
     for cate in CATEGORY_CHOICES:
-        if cate[1].lower() == categoria.lower():
-            posts_categoria = Post.objects.filter(category=f"{cate[0]}")
+        if cate[0].lower() == categoria.lower():
+            posts_categoria = Post.objects.filter(category=f"{cate[0]}").order_by('-id')
             selected_category = cate[1].title()
             break
     return render(request, "my_blog/categoria.html", {

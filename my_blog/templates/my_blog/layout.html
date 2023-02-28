@@ -54,6 +54,12 @@
                 <a href=""><div class="menu_button">Meu perfil</div></a>
                 <a href="/add"><div class="menu_button">Add</div></a>
             </div>
+            
+            <div class="footer_categories">
+                {% for category in all_categories %}
+                    <a href="/categoria/{{category.0.lower}}">{{category.1.title}}</a>
+                {% endfor %}
+            </div>
 
             <div class="footer_redes_sociais">
                 <a href="https://www.instagram.com/">

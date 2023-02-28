@@ -1,6 +1,3 @@
-from distutils.command.upload import upload
-from email.policy import default
-from unicodedata import category
 from django.db import models
 from .choices import *
 

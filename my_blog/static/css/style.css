@@ -31,7 +31,7 @@ header h1 {
 section#recentes,
 section#destaques,
 section#categorias {
-    width: 80%; height: auto;
+    width: 90%; height: auto;
     margin: auto;
     position: relative;
     margin-top: 50px;
